@@ -14,7 +14,7 @@ pacman -S --needed base-devel
 git clone https://aur.archlinux.org/yay.git
 chown -R "$SUDO_USER":"$SUDO_USER" yay                 #idk if works
 cd yay
-makepkg -si
+sudo -u "$SUDO_USER" makepkg -si
 cd ..
 yay --version
 mkdir r3quie
