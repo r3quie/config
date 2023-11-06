@@ -1,10 +1,11 @@
 #!/bin/bash
 
 ###### READ COMMENTS BEFORE RUNNING ######
+### script assumes logged in sudoer (not root!)
 echo "if you wish to run setup, enter password, press control+c to stop setup"
 [ "$UID" -eq 0 ] || exec sudo bash "$0" "$@";
 
-# system update
+# system update + pacman
 pacman -Suy
 pacman -S fish git foot starship
 pacman -S --needed base-devel
