@@ -29,6 +29,7 @@ alias clearn="clear; neofetch"
 alias cdc="cd .config/"
 alias vimfish="vim .config/fish/config.fish"
 alias spac="sudo pacman -S"
+alias update='./update.sh' #full system update, interactive
 
 # ufw
 alias ufw='sudo ufw'					#auto sudo on ufw call

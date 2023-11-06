@@ -15,6 +15,7 @@ alias ls='ls --color=auto'				#ls
 alias grep='grep --color=auto'  			#grep
 alias clearn='clear; neofetch'				#clear + neofetch
 alias spac='sudo pacman -S'				#sudo pacman -S
+alias update='./update.sh' #full system update, interactive
 
 # ufw
 alias ufw='sudo ufw'					#auto sudo on ufw call
