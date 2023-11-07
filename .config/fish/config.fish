@@ -26,10 +26,13 @@ pfetch
 #### ALIAS ####
 # everyday
 alias clearn="clear; neofetch"
-alias cdc="cd .config/"
+alias cdc="cd ~/.config/"
 alias vimfish="vim .config/fish/config.fish"
 alias spac="sudo pacman -S"
+alias cdgit='cd ~/git\ repos/config'
+
 alias update='./update.sh' #full system update, interactive
+alias copyall='./copyall.sh' #copy from local repo
 
 # ufw
 alias ufw='sudo ufw'					#auto sudo on ufw call
