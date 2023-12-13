@@ -7,7 +7,7 @@
 
 #### ON TERMINAL OPEN ####
 pfetch
-./runpacman.sh
+
 
 #### ALIASES ####
 # everyday
@@ -16,10 +16,12 @@ alias grep='grep --color=auto'  			#grep
 alias clearn='clear; neofetch'				#clear + neofetch
 alias spac='sudo pacman -S'				#sudo pacman -S
 alias cdgit='cd ~/git\ repos/config'
+alias hexit='hyprctl dispatch exit'
 
-alias update='./update.sh' #full system update, interactive
-alias copyall='./copyall.sh' #copy from local repo
-alias mountPC='./mountPC.sh' #mounts remote folder from local PC
+alias gitpushconfig='cd ~ && ./gitpushconfig.sh'
+alias update='cd ~ && ./update.sh' #full system update, interactive
+alias copyall='cd ~ && ./copyall.sh' #copy from local repo + remedy config changes from dots installs
+alias mountPC='cd ~ && ./mountPC.sh' #mounts remote folder from local PC
 
 alias footopa='sed -i 's/alpha=1/alpha=0.3/' ~/.config/foot/foot.ini'
 
