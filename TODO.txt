@@ -1,0 +1,2 @@
+move scripts to seperate folder -> change filepaths!
+updatedots script first checks if git changed
