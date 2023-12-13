@@ -22,6 +22,7 @@ alias gitpushconfig='~/gitpushconfig.sh'
 alias update='~/update.sh' #full system update, interactive
 alias copyall='~/copyall.sh' #copy from local repo + remedy config changes from dots installs
 alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
+alias updatedots='~/updatedots.sh'
 
 alias footopa='sed -i 's/alpha=1/alpha=0.3/' ~/.config/foot/foot.ini'
 

@@ -10,6 +10,7 @@ cp .bashrc ~
 cp .config/fish/config.fish ~/.config/fish/
 cp gitpushconfig.sh ~
 cp copyall.sh ~
+cp updatedots.sh ~
 
 #### Gnome to KDE ####
 
