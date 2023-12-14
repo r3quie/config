@@ -17,8 +17,8 @@ cd yay
 sudo -u "$SUDO_USER" makepkg -si
 cd ..
 yay --version
-mkdir r3quie
-cd r3quie
+mkdir git\ repos
+cd git\ repos
 git clone https://github.com/r3quie/config.git
 
 # MAKE EFFECTIVE PLS

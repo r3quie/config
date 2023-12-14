@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#################### d e p r e c a t e d #################### atm, using symbolic links, might work on
 
 #### Copy ####
 cd ~/git\ repos/config/
