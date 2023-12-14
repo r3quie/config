@@ -27,3 +27,9 @@ else
     echo "sed -i 's/alpha=1/alpha=0.3/' ~/.config/foot/foot.ini" >> ~/.config/ags/scripts/color_generation/applycolor.sh
     echo "amended applycolor.sh - footopa"
 fi
+
+cd ~/.config/fish
+rm config.fish
+ln -sf ~/git\ repos/config/.config/fish/config.fish
+
+cd ~

@@ -22,11 +22,8 @@ cd git\ repos
 git clone https://github.com/r3quie/config.git
 
 # MAKE EFFECTIVE PLS
-cd config
-cp .bashrc ~
-cp runpacman.sh ~
-cp update.sh ~
-cp .config/foot/config.foot ~/.config/foot/
+exec ~/git\ repos/config/scripts/setuplinks.sh
 sudo -u "$SUDO_USER" yay pfetch
 sleep 1
 echo restart pls
+
