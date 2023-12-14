@@ -3,7 +3,7 @@
 
 #### Copy ####
 cd ~/git\ repos/config/
-cp -r scripts
+cp -r scripts ~
 cp .bashrc ~
 cp .config/fish/config.fish ~/.config/fish/
 
