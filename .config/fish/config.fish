@@ -32,11 +32,11 @@ alias spac="sudo pacman -S"
 alias cdgit='cd ~/git\ repos/config'
 alias hexit='hyprctl dispatch exit'
 
-alias gitpushconfig='~/gitpushconfig.sh'
-alias update='~/update.sh' #full system update, interactive
-alias copyall='~/copyall.sh' #copy from local repo
-alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
-alias updatedots='~/updatedots.sh'
+alias gitpushconfig='~/scripts/gitpushconfig.sh'
+alias update='~/scripts/update.sh' #full system update, interactive
+alias copyall='~/scripts/copyall.sh' #copy from local repo
+alias mountPC='~/scripts/mountPC.sh' #mounts remote folder from local PC
+alias updatedots='~/scripts/updatedots.sh'
 
 alias footopa='sed -i 's/alpha=1/alpha=0.3/' ~/.config/foot/foot.ini'
 

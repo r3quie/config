@@ -3,14 +3,9 @@
 
 #### Copy ####
 cd ~/git\ repos/config/
-cp archsetup.sh ~
-cp runpacman.sh ~
-cp update.sh ~
+cp -r scripts
 cp .bashrc ~
 cp .config/fish/config.fish ~/.config/fish/
-cp gitpushconfig.sh ~
-cp copyall.sh ~
-cp updatedots.sh ~
 
 #### Gnome to KDE ####
 
