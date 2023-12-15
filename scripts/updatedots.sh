@@ -1,6 +1,20 @@
 #!/bin/bash
 
-echo "press enter to continue with updating illogical-impulse, ctrl+c to stop"
+cd ~/git\ repos/dots-hyprland
+if git status | grep -q "Your branch is up to date"; then
+	echo "Git dots are up to date"
+else
+	echo "Git dots are not up to date"
+fi
+
+cd ~/git\ repos/ags
+if git status | grep -q "Your branch is up to date"; then
+	echo "Git AGS is up to date"
+else
+	echo "Git AGS is not up to date"
+fi
+
+echo "press enter to continue with updating illogical-impulse, ctrl(+shift)+c to stop"
 read
 echo "pulling dots"
 cd ~/git\ repos/dots-hyprland

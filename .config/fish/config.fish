@@ -31,6 +31,7 @@ alias vimfish="vim .config/fish/config.fish"
 alias spac="sudo pacman -S"
 alias cdgit='cd ~/git\ repos/config'
 alias hexit='hyprctl dispatch exit'
+alias cdh='cd ~'
 
 alias gitpushconfig='~/scripts/gitpushconfig.sh'
 alias update='~/scripts/update.sh' #full system update, interactive
