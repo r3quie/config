@@ -20,10 +20,19 @@ yay --version
 mkdir git\ repos
 cd git\ repos
 git clone https://github.com/r3quie/config.git
+exec ~/git\ repos/config/scripts/setuplinks.sh
 
 # MAKE EFFECTIVE PLS
 exec ~/git\ repos/config/scripts/setuplinks.sh
 sudo -u "$SUDO_USER" yay pfetch
 sleep 1
-echo restart pls
+echo "if you wish to install hyprland + illogical-impulse, continue, press ctrl(+shift)+c and reboot"
 
+cd ~/git\ repos/
+git clone -b illogical-impulse https://github.com/end-4/dots-hyprland.git
+
+exec ~/git\ repos/dots-hyprland/install.sh
+sleep 1
+exec ~/git\ repos/config/scripts/setuplinks.sh
+
+echo "restart pls"
