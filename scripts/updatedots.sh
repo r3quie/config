@@ -23,7 +23,7 @@ cd ~/git\ repos/dots-hyprland
 
 echo "git pull origin"
 git pull origin
-
+rm .config/fish/config.fish
 echo "cp -r .config  ~"
 cp -r .config  ~
 echo "cp -r .local ~"
