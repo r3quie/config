@@ -3,7 +3,7 @@
 ###### READ COMMENTS BEFORE RUNNING ######
 ### script assumes logged in sudoer (not root!)
 echo "if you wish to run setup, enter password, press control+c to stop setup"
-
+read
 # system update + pacman
 sudo pacman -Suy
 sudo pacman -S fish git foot starship
@@ -21,8 +21,6 @@ cd gitrepos
 git clone https://github.com/r3quie/config.git
 exec ~/gitrepos/config/scripts/setuplinks.sh
 
-# MAKE EFFECTIVE PLS
-exec ~/gitrepos/config/scripts/setuplinks.sh
 yay pfetch
 sleep 1
 echo "if you wish to install hyprland + illogical-impulse, continue, press ctrl(+shift)+c and reboot"
