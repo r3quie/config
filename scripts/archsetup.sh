@@ -27,7 +27,7 @@ exec ~/gitrepos/config/scripts/setuplinks.sh
 sudo -u "$SUDO_USER" yay pfetch
 sleep 1
 echo "if you wish to install hyprland + illogical-impulse, continue, press ctrl(+shift)+c and reboot"
-
+read
 cd ~/gitrepos/
 git clone -b illogical-impulse https://github.com/end-4/dots-hyprland.git
 
