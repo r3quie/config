@@ -2,7 +2,7 @@
 #################### d e p r e c a t e d #################### atm, using symbolic links, might work on
 
 #### Copy ####
-cd ~/git\ repos/config/
+cd ~/gitrepos/config/
 cp -r scripts ~
 cp .bashrc ~
 cp .config/fish/config.fish ~/.config/fish/

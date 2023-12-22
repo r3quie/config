@@ -17,22 +17,22 @@ cd yay
 sudo -u "$SUDO_USER" makepkg -si
 cd ..
 yay --version
-mkdir git\ repos
-cd git\ repos
+mkdir gitrepos
+cd gitrepos
 git clone https://github.com/r3quie/config.git
-exec ~/git\ repos/config/scripts/setuplinks.sh
+exec ~/gitrepos/config/scripts/setuplinks.sh
 
 # MAKE EFFECTIVE PLS
-exec ~/git\ repos/config/scripts/setuplinks.sh
+exec ~/gitrepos/config/scripts/setuplinks.sh
 sudo -u "$SUDO_USER" yay pfetch
 sleep 1
 echo "if you wish to install hyprland + illogical-impulse, continue, press ctrl(+shift)+c and reboot"
 
-cd ~/git\ repos/
+cd ~/gitrepos/
 git clone -b illogical-impulse https://github.com/end-4/dots-hyprland.git
 
-exec ~/git\ repos/dots-hyprland/install.sh
+exec ~/gitrepos/dots-hyprland/install.sh
 sleep 1
-exec ~/git\ repos/config/scripts/setuplinks.sh
+exec ~/gitrepos/config/scripts/setuplinks.sh
 
 echo "restart pls"

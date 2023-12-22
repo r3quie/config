@@ -2,12 +2,12 @@
 
 cd ~
 rm .bashrc
-ln -sf ~/git\ repos/config/.bashrc
+ln -sf ~/gitrepos/config/.bashrc
 
-ln -sf ~/git\ repos/config/scripts
+ln -sf ~/gitrepos/config/scripts
 
 cd ~/.config/fish
 rm config.fish
-ln -sf ~/git\ repos/config/.config/fish/config.fish
+ln -sf ~/gitrepos/config/.config/fish/config.fish
 
 cd ~

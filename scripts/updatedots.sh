@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/git\ repos/dots-hyprland
+cd ~/gitrepos/dots-hyprland
 git remote update
 if git status -uno | grep -q "Your branch is up to date"; then
 	echo "Git dots are up to date"
@@ -8,7 +8,7 @@ else
 	echo "Git dots are not up to date"
 fi
 
-cd ~/git\ repos/ags
+cd ~/gitrepos/ags
 git remote update
 if git status -uno | grep -q "Your branch is up to date"; then
 	echo "Git AGS is up to date"
@@ -19,7 +19,7 @@ fi
 echo "press enter to continue with updating illogical-impulse, ctrl(+shift)+c to stop"
 read
 echo "pulling dots"
-cd ~/git\ repos/dots-hyprland
+cd ~/gitrepos/dots-hyprland
 
 echo "git pull origin"
 git pull origin
@@ -46,6 +46,6 @@ fi
 
 cd ~/.config/fish
 rm config.fish
-ln -sf ~/git\ repos/config/.config/fish/config.fish
+ln -sf ~/gitrepos/config/.config/fish/config.fish
 
 cd ~
