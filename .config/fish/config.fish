@@ -29,7 +29,7 @@ alias clearn="clear; neofetch"
 alias cdc="cd ~/.config/"
 alias vimfish="vim .config/fish/config.fish"
 alias spac="sudo pacman -S"
-alias cdgit='cd ~/git\ repos/config'
+alias cdgit='cd ~/gitrepos/config'
 alias hexit='hyprctl dispatch exit'
 alias cdh='cd ~'
 
