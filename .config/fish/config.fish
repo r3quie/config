@@ -32,6 +32,7 @@ alias spac="sudo pacman -S"
 alias cdgit='cd ~/gitrepos/config'
 alias hexit='hyprctl dispatch exit'
 alias cdh='cd ~'
+alias pullconf='cdgit && git pull'
 
 alias gitpushconfig='~/scripts/gitpushconfig.sh'
 alias update='~/scripts/update.sh' #full system update, interactive

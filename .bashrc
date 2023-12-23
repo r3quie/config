@@ -19,6 +19,7 @@ alias cdgit='cd ~/gitrepos/config'
 alias hexit='hyprctl dispatch exit'
 alias cdh='cd ~'
 alias cdc='cd ~/.config'
+alias pullconf='cdgit && git pull'
 
 alias gitpushconfig='~/scripts/gitpushconfig.sh'
 alias update='~/scripts/update.sh' #full system update, interactive
