@@ -27,7 +27,7 @@ alias copyall='~/scripts/copyall.sh' #copy from local repo
 alias mountPC='~/scripts/mountPC.sh' #mounts remote folder from local PC
 alias updatedots='~/scripts/updatedots.sh'
 
-alias footopa='sed -i 's/alpha=1/alpha=0.3/' ~/.config/foot/foot.ini'
+alias footopa='sed -i 's/alpha=1/alpha=0.5/' ~/.config/foot/foot.ini'
 
 # ufw
 alias ufw='sudo ufw'					#auto sudo on ufw call
