@@ -3,6 +3,7 @@ Description=UpdateGit
 
 [Service]
 ExecStart=~/gitrepos/scripts/startup.sh
+Type=oneshot
 
 [Install]
 WantedBy=default.target 
