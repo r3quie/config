@@ -1,8 +1,9 @@
 #TODO
-add yay to archsetup.sh
-add startup.sh to archsetup.sh
+
 
 #DONE
+~~add yay to archsetup.sh~~
+~~add startup.sh to archsetup.sh~~
 ~~move scripts to seperate folder -> change filepaths!~~
 ~~updatedots script first checks if git changed~~
 

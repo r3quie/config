@@ -23,10 +23,21 @@ cp config/.config/fish/config.fish ~/.config/fish/config.fish
 yay pfetch
 sleep 1
 
+# startup 
+cd /etc/systemd/system
+sudo ln -sf /home/"$SUDO_USER"/gitrepos/config/scripts/services/startup.service
+
+cd /usr/bin
+sudo ln -sf /home/"$SUDO_USER"/gitrepos/config/scripts/startup.sh
+
+sudo systemctl enable script.service
 ######################################################### DOTS
 
 echo "if you wish to install hyprland + illogical-impulse, continue, press ctrl(+shift)+c and reboot"
 read
+
+yay -S brightnessctl coreutils curl fish foot fuzzel gjs gnome-bluetooth-3.0 gnome-control-center gnome-keyring gobject-introspection grim gtk3 gtk-layer-shell libdbusmenu-gtk3 meson networkmanager npm plasma-browser-integration playerctl polkit-gnome python-pywal ripgrep sassc slurp starship swayidle swaylock typescript upower xorg-xrandr webp-pixbuf-loader wget wireplumber wl-clipboard tesseract yad ydotool adw-gtk3-git cava gojq gradience-git gtklock gtklock-playerctl-module gtklock-powerbar-module gtklock-userinfo-module hyprland-git lexend-fonts-git python-material-color-utilities python-pywal python-poetry python-build python-pillow swww ttf-material-symbols-variable-git ttf-space-mono-nerd ttf-jetbrains-mono-nerd wayland-idle-inhibitor-git wlogout
+
 cd ~/gitrepos/
 git clone -b illogical-impulse https://github.com/end-4/dots-hyprland.git && cd dots-hyprland
 
