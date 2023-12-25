@@ -1,0 +1,8 @@
+[Unit]
+Description=UpdateGit
+
+[Service]
+ExecStart=/usr/bin/startup.sh
+
+[Install]
+WantedBy=multi-user.target 

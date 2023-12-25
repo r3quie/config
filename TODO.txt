@@ -3,7 +3,7 @@ add yay to archsetup.sh
 add startup.sh to archsetup.sh
 
 #DONE
-##move scripts to seperate folder -> change filepaths!##
-##updatedots script first checks if git changed##
+~~move scripts to seperate folder -> change filepaths!~~
+~~updatedots script first checks if git changed~~
 
 
