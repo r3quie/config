@@ -27,6 +27,9 @@ sleep 1
 cd ~/.config/systemd/user
 sudo ln -sf ~/gitrepos/config/scripts/services/startup.service
 
+cd /usr/bin
+sudo ln -sf ~/gitrepos/config/scripts/startup.sh
+
 sudo systemctl enable script.service
 ######################################################### DOTS
 

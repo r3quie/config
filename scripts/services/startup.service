@@ -2,7 +2,7 @@
 Description=UpdateGit
 
 [Service]
-ExecStart=~/gitrepos/scripts/startup.sh
+ExecStart=/usr/bin/startup.sh
 Type=oneshot
 
 [Install]
