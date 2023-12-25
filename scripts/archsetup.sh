@@ -24,11 +24,8 @@ yay pfetch
 sleep 1
 
 # startup 
-cd /etc/systemd/system
-sudo ln -sf /home/"$SUDO_USER"/gitrepos/config/scripts/services/startup.service
-
-cd /usr/bin
-sudo ln -sf /home/"$SUDO_USER"/gitrepos/config/scripts/startup.sh
+cd ~/.config/systemd/user
+sudo ln -sf ~/gitrepos/config/scripts/services/startup.service
 
 sudo systemctl enable script.service
 ######################################################### DOTS
