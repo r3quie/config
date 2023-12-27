@@ -45,7 +45,7 @@ case $yn in
            aup=1;
            dup=1;
            break;;
-        [mM] echo "updating based on colored output";
+        [mM] ) echo "updating based on colored output";
            break;;
         * ) echo invalid response;;
 esac
