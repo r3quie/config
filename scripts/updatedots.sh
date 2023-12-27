@@ -1,24 +1,24 @@
 #!/bin/bash
 
 # colors
-source colors.sh
+source ~/scripts/colors.sh
 
 # check if dots up to date
 cd ~/gitrepos/dots-hyprland
 git remote update
 if git status -uno | grep -q "Your branch is up to date"; then
-	echo -e "${BPurple}Git dots are up to date"
+	echo -e "${BPurple}Git dots are up to date${Color_Off}"
 else
-	echo -e "${BPurple}Git dots are not up to date"
+	echo -e "${BPurple}Git dots are not up to date${Color_Off}"
 fi
 
 # check if ags up to date
 cd ~/gitrepos/ags
 git remote update
 if git status -uno | grep -q "Your branch is up to date"; then
-	echo -e "${BPurple}Git AGS is up to date"
+	echo -e "${BPurple}Git AGS is up to date${Color_Off}"
 else
-	echo -e "${BPurple}Git AGS is not up to date"
+	echo -e "${BPurple}Git AGS is not up to date${Color_Off}"
 fi
 
 # stop for userinput
