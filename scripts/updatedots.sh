@@ -21,11 +21,38 @@ else
 	echo -e "${BPurple}Git AGS is not up to date${Color_Off}"
 fi
 
+aup=0
+dup=0
+
+while true; do
+
+read -p "Do you want to update dots illogical-impulse and ags? ([d]ots/[a]gs/[b]oth/[n]one): " yn
+
+case $yn in
+        [dD] ) echo "updating dots only";
+           dup=1;
+           break;;
+        [nN] ) echo not updating;
+           echo exiting...;
+           exit;;
+        [aA] ) echo "updating ags only";
+           aup=1;
+           break;;
+        [bB] ) echo "updating all";
+           aup=1;
+		   dup=1
+           break;;
+        * ) echo invalid response;;
+esac
+
+done
+
 # stop for userinput
 echo "press enter to continue with updating illogical-impulse, ctrl(+shift)+c to stop"
 read
 
 # pull ags
+if $aup -eq 1; then
 echo "pulling ags"
 cd ~/gitrepos/ags
 git pull origin
@@ -33,14 +60,18 @@ git pull origin
 npm install && meson setup build --reconfigure
 echo "do not forget to sudo"
 meson install -C build
+fi
 
+if $dup -eq 1; then
 # pull dots
 echo "pulling dots"
-cd ../dots-hyprland
+cd ~/gitrepos/dots-hyprland
 echo "git pull origin"
 git pull origin
+fi
 
 # copy dotfiles
+cd ~/gitrepos/dots-hyprland
 rm .config/fish/config.fish
 echo "cp -r .config  ~"
 cp -r .config  ~
