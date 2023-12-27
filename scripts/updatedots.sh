@@ -52,7 +52,7 @@ echo "press enter to continue with updating illogical-impulse, ctrl(+shift)+c to
 read
 
 # pull ags
-if $aup -eq 1; then
+if [ $aup -eq 1 ]; then
 echo "pulling ags"
 cd ~/gitrepos/ags
 git pull origin
@@ -62,7 +62,7 @@ echo "do not forget to sudo"
 meson install -C build
 fi
 
-if $dup -eq 1; then
+if [ $dup -eq 1 ]; then
 # pull dots
 echo "pulling dots"
 cd ~/gitrepos/dots-hyprland
