@@ -25,9 +25,6 @@ else
    aup=1
 fi
 
-aup=0
-dup=0
-
 # stop for userinput
 
 while true; do
@@ -54,6 +51,14 @@ case $yn in
 esac
 
 done
+
+#exit if both vars eq 0
+
+if [ $((aup+dup)) -eq 0 ]; then
+   echo "script has found that no updates are needed"
+   echo "exitting..."
+   exit
+fi
 
 # pull ags
 if [ $aup -eq 1 ]; then
