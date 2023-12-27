@@ -29,7 +29,7 @@ fi
 
 while true; do
 
-read -p "Do you want to update dots illogical-impulse and ags? ([d]ots/[a]gs/[b]oth/[n]one): \ncAlternatively, let this script decide for you based on git status [M]" yn
+read -p "Do you want to update dots illogical-impulse and ags? ${BGreen}([d]ots/[a]gs/[b]oth/[n]one)${Color_Off} Alternatively, let this script decide for you based on git status ${BGreen}(auto[M]atically)${Color_Off}" yn
 
 case $yn in
         [dD] ) echo "updating dots only";
@@ -45,7 +45,7 @@ case $yn in
            aup=1;
            dup=1;
            break;;
-        [mM] echo "updating based on colored output"
+        [mM] echo "updating based on colored output";
            break;;
         * ) echo invalid response;;
 esac
