@@ -30,7 +30,7 @@ echo -e "Do you want to update dots illogical-impulse and ags? ${BGreen}([d]ots/
 echo -e "Alternatively, let this script decide for you based on git status ${BGreen}(auto[M]atically)${Color_Off}"
 while true; do
 
-read -p "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" yn
+read -p " " yn
 
 case $yn in
         [dD] ) echo "updating dots only";
