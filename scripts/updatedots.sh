@@ -8,8 +8,10 @@ cd ~/gitrepos/dots-hyprland
 git remote update
 if git status -uno | grep -q "Your branch is up to date"; then
 	echo -e "${BPurple}Git dots are up to date${Color_Off}"
+   dup=0
 else
 	echo -e "${BPurple}Git dots are not up to date${Color_Off}"
+   dup=1
 fi
 
 # check if ags up to date
@@ -17,16 +19,20 @@ cd ~/gitrepos/ags
 git remote update
 if git status -uno | grep -q "Your branch is up to date"; then
 	echo -e "${BPurple}Git AGS is up to date${Color_Off}"
+   aup=0
 else
 	echo -e "${BPurple}Git AGS is not up to date${Color_Off}"
+   aup=1
 fi
 
 aup=0
 dup=0
 
+# stop for userinput
+
 while true; do
 
-read -p "Do you want to update dots illogical-impulse and ags? ([d]ots/[a]gs/[b]oth/[n]one): " yn
+read -p "Do you want to update dots illogical-impulse and ags? ([d]ots/[a]gs/[b]oth/[n]one): \ncAlternatively, let this script decide for you based on git status [M]" yn
 
 case $yn in
         [dD] ) echo "updating dots only";
@@ -40,16 +46,14 @@ case $yn in
            break;;
         [bB] ) echo "updating all";
            aup=1;
-	   dup=1;
+           dup=1;
+           break;;
+        [mM] echo "updating based on colored output"
            break;;
         * ) echo invalid response;;
 esac
 
 done
-
-# stop for userinput
-echo "press enter to continue with updating illogical-impulse, ctrl(+shift)+c to stop"
-read
 
 # pull ags
 if [ $aup -eq 1 ]; then
