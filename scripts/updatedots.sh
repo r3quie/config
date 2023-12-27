@@ -80,7 +80,7 @@ echo "git pull origin"
 git pull origin
 fi
 
-# copy dotfiles
+# copy dotfiles, copying intentionally not nested, installing ags without copying will overwrite config!
 cd ~/gitrepos/dots-hyprland
 rm .config/fish/config.fish
 echo "cp -r .config  ~"

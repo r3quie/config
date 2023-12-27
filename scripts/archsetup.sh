@@ -30,39 +30,44 @@ cd /usr/bin
 sudo ln -sf /home/$USER/gitrepos/config/scripts/startup.sh
 
 sudo systemctl enable script.service
-######################################################### DOTS
+
+#links
+exec ~/gitrepos/config/scripts/setuplinks.sh
+
 echo "base config has been installed"
 sleep 1
+
+############################ DOTS ############################
+# userinput
 echo "if you wish to install hyprland + illogical-impulse, continue, otherwise press ctrl(+shift)+c and reboot"
 read
 
+#yay
 yay -S brightnessctl coreutils curl fish foot fuzzel gjs gnome-bluetooth-3.0 gnome-control-center gnome-keyring gobject-introspection grim gtk3 gtk-layer-shell libdbusmenu-gtk3 meson networkmanager npm plasma-browser-integration playerctl polkit-gnome python-pywal ripgrep sassc slurp starship swayidle swaylock typescript upower xorg-xrandr webp-pixbuf-loader wget wireplumber wl-clipboard tesseract yad ydotool adw-gtk3-git cava gojq gradience-git gtklock gtklock-playerctl-module gtklock-powerbar-module gtklock-userinfo-module hyprland-git lexend-fonts-git python-material-color-utilities python-pywal python-poetry python-build python-pillow swww ttf-material-symbols-variable-git ttf-space-mono-nerd ttf-jetbrains-mono-nerd wayland-idle-inhibitor-git wlogout
 
+#ags
 cd ~/gitrepos/
 git clone --recursive https://github.com/Aylur/ags.git && cd ags
 npm install && meson setup build
 echo "do not forget to sudo"
 meson install -C build
 
+#dots
 cd ~/gitrepos/
 git clone -b illogical-impulse https://github.com/end-4/dots-hyprland.git && cd dots-hyprland
-
 rm .config/fish/config.fish
 echo "cp -r .config  ~"
 cp -r .config  ~
 echo "cp -r .local ~"
 cp -r .local ~
 
-if cat ~/.config/ags/scripts/color_generation/applycolor.sh | grep -q "sed -i 's/alpha=1/alpha=0.3/' ~/.config/foot/foot.ini"
+#amend footopa
+if cat ~/.config/ags/scripts/color_generation/applycolor.sh | grep -q "sed -i 's/alpha=1/alpha=0.5/' ~/.config/foot/foot.ini"
 then
     :
 else 
-    echo "sed -i 's/alpha=1/alpha=0.3/' ~/.config/foot/foot.ini" >> ~/.config/ags/scripts/color_generation/applycolor.sh
+    echo -e "\nsed -i 's/alpha=1/alpha=0.5/' ~/.config/foot/foot.ini" >> ~/.config/ags/scripts/color_generation/applycolor.sh
     echo "amended applycolor.sh - footopa"
 fi
-
-
-sleep 1
-exec ~/gitrepos/config/scripts/setuplinks.sh
 
 echo "restart pls"
