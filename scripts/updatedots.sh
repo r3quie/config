@@ -40,7 +40,7 @@ case $yn in
            break;;
         [bB] ) echo "updating all";
            aup=1;
-		   dup=1
+		   dup=1;
            break;;
         * ) echo invalid response;;
 esac
