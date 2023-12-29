@@ -22,7 +22,7 @@ alias cdc='cd ~/.config'
 alias pullconf='cdgit && git pull'
 
 alias gitpushconfig='~/scripts/gitpushconfig.sh'
-alias update='~/scripts/update.sh' #full system update, interactive
+alias update='sudo pacman -Suy && yay -Suy'
 alias copyall='~/scripts/copyall.sh' #copy from local repo
 alias mountPC='~/scripts/mountPC.sh' #mounts remote folder from local PC
 alias updatedots='~/scripts/updatedots.sh'
