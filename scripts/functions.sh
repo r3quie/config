@@ -16,6 +16,6 @@ fncStartup () {
     cd /usr/bin
     sudo ln -sf /home/$USER/gitrepos/config/scripts/startup.sh
 
-    sudo systemctl enable startup.service
+    systemctl --user enable startup.service
 }
 
