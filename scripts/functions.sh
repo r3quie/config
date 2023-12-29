@@ -2,7 +2,15 @@
 
 # setup systemd service for automatic git pulls
 fncStartup () {
-    cd ~/.config/systemd/user
+    if cd ~/.config/systemd/user; then
+        :
+    else
+        echo "systemd does not have a user dir in .config"
+        echo "creating..."
+        cd ~/.config
+        mkdir systemd && cd systemd
+        mkdir user && cd user
+    fi
     sudo ln -sf ~/gitrepos/config/scripts/services/startup.service
 
     cd /usr/bin
