@@ -22,14 +22,18 @@ git clone https://github.com/r3quie/config.git
 yay pfetch
 sleep 1
 
-# startup 
-cd ~/.config/systemd/user
-sudo ln -sf ~/gitrepos/config/scripts/services/startup.service
+# startup, function set up for sourcing, testing
+fncStartup () {
+    cd ~/.config/systemd/user
+    sudo ln -sf ~/gitrepos/config/scripts/services/startup.service
 
-cd /usr/bin
-sudo ln -sf /home/$USER/gitrepos/config/scripts/startup.sh
+    cd /usr/bin
+    sudo ln -sf /home/$USER/gitrepos/config/scripts/startup.sh
 
-sudo systemctl enable script.service
+    sudo systemctl enable script.service
+}
+
+fncStartup
 
 #links
 exec ~/gitrepos/config/scripts/setuplinks.sh
