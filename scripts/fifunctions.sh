@@ -1,12 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env fish
 
 if ps | grep "fish"; then
-    source ~/scripts/fifunctions.sh
+    :
+else
+    source ~/scripts/functions.sh
     exit
-fi
+end
 
-# setup systemd service for automatic git pulls
-fncStartup () {
+function fncStartup
     if cd ~/.config/systemd/user; then
         :
     else
@@ -15,12 +16,11 @@ fncStartup () {
         cd ~/.config
         mkdir systemd && cd systemd
         mkdir user && cd user
-    fi
+    end
     sudo ln -sf ~/gitrepos/config/scripts/services/startup.service
 
     cd /usr/bin
     sudo ln -sf /home/$USER/gitrepos/config/scripts/startup.sh
 
     systemctl --user enable startup.service
-}
-
+end
