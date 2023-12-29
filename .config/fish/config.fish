@@ -20,7 +20,7 @@ starship init fish | source
 # end
 
 #### CUSTOM ####
-
+source ~/scripts/.fifunctions.sh
 pfetch
 
 #### ALIAS ####
@@ -46,11 +46,3 @@ alias footopa='sed -i 's/alpha=1/alpha=0.5/' ~/.config/foot/foot.ini'
 alias ufw='sudo ufw'					#auto sudo on ufw call
 alias ufwsa='sudo ufw allow 22/tcp; sudo ufw allow 22'  #open SSH ports
 alias ufwsd='sudo ufw deny 22/tcp; sudo ufw deny 22'    #close SSH ports
-
-# special alias for sourcing functions
-function sourcefnc
-    printf "this action requires the use bash\npress enter to continue"
-    read
-    bash
-    source ~/scripts/functions.sh
-end

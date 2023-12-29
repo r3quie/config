@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # colors
-source ~/scripts/colors.sh
+source ~/scripts/.colors.sh
 
 # check if dots up to date
 cd ~/gitrepos/dots-hyprland

@@ -6,8 +6,8 @@
 [[ $- != *i* ]] && return
 
 #### ON TERMINAL OPEN ####
+source ~/scripts/.functions.sh
 pfetch
-
 
 #### ALIASES ####
 # everyday
