@@ -1,10 +1,5 @@
 #!/bin/bash
 
-if ps | grep "fish"; then
-    source ~/scripts/fifunctions.sh
-    exit
-fi
-
 # setup systemd service for automatic git pulls
 fncStartup () {
     if cd ~/.config/systemd/user; then
