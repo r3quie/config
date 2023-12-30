@@ -14,7 +14,7 @@ fncStartup () {
     sudo ln -sf ~/"$GITDIR"/config/scripts/services/startup.service
 
     cd /usr/bin
-    sudo ln -sf /home/$USER/"$GITDIR"/config/scripts/startup.sh
+    sudo ln -sf $HOME/"$GITDIR"/config/scripts/startup.sh
 
     systemctl --user enable startup.service
 }
