@@ -44,7 +44,7 @@ fncSetGITDIR
     read gr
 
     if [ -z "${gr}" ]; then
-        gr=gitrepos
+        set gr gitrepos
     end
 
     echo -e "\nGITDIR="$gr"" >> GITDIR.sh
