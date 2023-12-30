@@ -43,9 +43,7 @@ fncSetGITDIR
     echo "Enter name of directory with git repos. If empty=gitrepos"
     read gr
 
-    if [ -z "$gr" ]; then 
-        set gr gitrepos
-    end
+    if [ -z "$gr" ]; then set gr gitrepos
     echo "GITDIR="$gr"" >> GITDIR.sh
     sudo mv GITDIR.sh /etc/profile.d/GITDIR.sh
 end
