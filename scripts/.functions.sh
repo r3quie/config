@@ -47,7 +47,7 @@ fncSetGITDIR () {
         gr=gitrepos
     fi
 
-    cp /env/environment ~/environment
+    cp /etc/environment ~/environment
     echo -e "\nGITDIR="$gr"" >> ~/environment
-    sudo mv ~/environment /env/environment
+    sudo mv ~/environment /etc/environment
 }
