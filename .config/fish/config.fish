@@ -34,9 +34,7 @@ alias hexit='hyprctl dispatch exit'
 alias cdh='cd ~'
 alias pullconf='cdgit && git pull'
 
-alias gitpushconfig='~/scripts/gitpushconfig.sh'
 alias update='sudo pacman -Suy && yay -Suy'
-alias copyall='~/scripts/copyall.sh' #copy from local repo
 alias mountPC='~/scripts/mountPC.sh' #mounts remote folder from local PC
 alias updatedots='~/scripts/updatedots.sh'
 

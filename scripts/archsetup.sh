@@ -19,21 +19,22 @@ yay --version
 cd ~/gitrepos
 git clone https://github.com/r3quie/config.git
 
+if source config/scripts/functions.sh; then
+    :
+else
+    echo "sourcing functions failed"
+    echo "debug on your own hah"
+    exit
+fi
+
 yay pfetch
 sleep 1
 
 # startup
-cd ~/.config/systemd/user
-sudo ln -sf ~/gitrepos/config/scripts/services/startup.service
-
-cd /usr/bin
-sudo ln -sf /home/$USER/gitrepos/config/scripts/startup.sh
-
-systemctl --user enable startup.service
-
+fncStartup
 
 #links
-exec ~/gitrepos/config/scripts/setuplinks.sh
+fncSetuplinks
 
 echo "base config has been installed"
 sleep 1

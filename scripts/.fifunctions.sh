@@ -18,3 +18,23 @@ function fncStartup
 
     systemctl --user enable startup.service
 end
+
+function fncSetuplinks
+    cd ~
+    rm .bashrc
+    ln -sf ~/gitrepos/config/.bashrc
+    ln -sf ~/gitrepos/config/scripts
+    cd ~/.config/fish
+    rm config.fish
+    ln -sf ~/gitrepos/config/.config/fish/config.fish
+    cd ~
+end
+
+function gitpushconfig
+    cd ~/gitrepos/config
+    git add .
+    echo "Enter commit name "
+    read nm
+    git commit -m "$nm"
+    git push origin main
+end
