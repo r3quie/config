@@ -20,7 +20,7 @@ starship init fish | source
 # end
 
 #### CUSTOM ####
-source ~/scripts/.fifunctions.sh
+source ~/scripts/.fifunctions.fish
 pfetch
 
 #### ALIAS ####
