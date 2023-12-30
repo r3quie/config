@@ -1,10 +1,12 @@
 #!/bin/bash
 
-cd ~
 ###### READ COMMENTS BEFORE RUNNING ######
 ### script assumes logged in sudoer (not root!)
+
 echo "if you wish to run setup, enter password, press control+c to stop setup"
 read
+
+cd ~
 # system update + pacman
 sudo pacman -Suy
 sudo pacman -S fish git foot starship
