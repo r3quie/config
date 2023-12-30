@@ -11,10 +11,10 @@ function fncStartup
         mkdir systemd && cd systemd
         mkdir user && cd user
     end
-    sudo ln -sf ~/gitrepos/config/scripts/services/startup.service
+    sudo ln -sf ~/"$GITDIR"/config/scripts/services/startup.service
 
     cd /usr/bin
-    sudo ln -sf /home/$USER/gitrepos/config/scripts/startup.sh
+    sudo ln -sf /home/$USER/"$GITDIR"/config/scripts/startup.sh
 
     systemctl --user enable startup.service
 end
@@ -22,19 +22,31 @@ end
 function fncSetuplinks
     cd ~
     rm .bashrc
-    ln -sf ~/gitrepos/config/.bashrc
-    ln -sf ~/gitrepos/config/scripts
+    ln -sf ~/"$GITDIR"/config/.bashrc
+    ln -sf ~/"$GITDIR"/config/scripts
     cd ~/.config/fish
     rm config.fish
-    ln -sf ~/gitrepos/config/.config/fish/config.fish
+    ln -sf ~/"$GITDIR"/config/.config/fish/config.fish
     cd ~
 end
 
 function gitpushconfig
-    cd ~/gitrepos/config
+    cd ~/"$GITDIR"/config
     git add .
     echo "Enter commit name "
     read nm
     git commit -m "$nm"
     git push origin main
+end
+
+fncSetGITDIR
+    echo "Enter name of directory with git repos. If empty=gitrepos"
+    read gr
+
+    if [ -z "${gr}" ]; then
+        gr=gitrepos
+    end
+
+    echo -e "\nGITDIR="$gr"" >> GITDIR.sh
+    sudo mv GITDIR.sh /etc/profile.d/GITDIR.sh
 end

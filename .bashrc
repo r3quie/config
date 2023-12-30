@@ -15,7 +15,7 @@ alias ls='ls --color=auto'				#ls
 alias grep='grep --color=auto'  			#grep
 alias clearn='clear; neofetch'				#clear + neofetch
 alias spac='sudo pacman -S'				#sudo pacman -S
-alias cdgit='cd ~/gitrepos/config'
+alias cdgit='cd ~/"$GITDIR"/config'
 alias hexit='hyprctl dispatch exit'
 alias cdh='cd ~'
 alias cdc='cd ~/.config'

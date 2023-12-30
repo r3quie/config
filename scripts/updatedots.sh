@@ -4,7 +4,7 @@
 source ~/scripts/.colors.sh
 
 # check if dots up to date
-cd ~/gitrepos/dots-hyprland
+cd ~/"$GITDIR"/dots-hyprland
 git remote update
 if git status -uno | grep -q "Your branch is up to date"; then
 	echo -e "${BPurple}Git dots are up to date${Color_Off}"
@@ -15,7 +15,7 @@ else
 fi
 
 # check if ags up to date
-cd ~/gitrepos/ags
+cd ~/"$GITDIR"/ags
 git remote update
 if git status -uno | grep -q "Your branch is up to date"; then
 	echo -e "${BPurple}Git AGS is up to date${Color_Off}"
@@ -64,7 +64,7 @@ fi
 # pull ags
 if [ $aup -eq 1 ]; then
 echo "pulling ags"
-cd ~/gitrepos/ags
+cd ~/"$GITDIR"/ags
 git pull origin
 # install
 npm install && meson setup build --reconfigure
@@ -75,13 +75,13 @@ fi
 if [ $dup -eq 1 ]; then
 # pull dots
 echo "pulling dots"
-cd ~/gitrepos/dots-hyprland
+cd ~/"$GITDIR"/dots-hyprland
 echo "git pull origin"
 git pull origin
 fi
 
 # copy dotfiles, copying intentionally not nested, installing ags without copying will overwrite config!
-cd ~/gitrepos/dots-hyprland
+cd ~/"$GITDIR"/dots-hyprland
 rm .config/fish/config.fish
 echo "cp -r .config  ~"
 cp -r .config  ~
@@ -100,6 +100,6 @@ fi
 # just in case, might delete
 cd ~/.config/fish
 rm config.fish
-ln -sf ~/gitrepos/config/.config/fish/config.fish
+ln -sf ~/"$GITDIR"/config/.config/fish/config.fish
 
 cd ~

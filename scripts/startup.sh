@@ -1,5 +1,5 @@
 #!/bin/sh
 
-cd ~/gitrepos/config
+cd ~/"$GITDIR"/config
 git pull origin main
 
