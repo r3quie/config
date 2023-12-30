@@ -18,7 +18,7 @@ if [ -z "${gr}" ]; then
     gr=gitrepos
 fi
 
-echo -e "\nGITDIR="$gr"" >> GITDIR.sh
+echo "GITDIR="$gr"" >> GITDIR.sh
 sudo mv GITDIR.sh /etc/profile.d/GITDIR.sh
 
 # yay setup
