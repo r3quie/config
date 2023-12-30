@@ -48,7 +48,7 @@ fncSetGITDIR () {
     fi
 
     if cat /etc/environment | grep -q "GITDIR"; then
-        sed -i 's/GITDIR="$GITDIR"/GITDIR="$gr"/' /etc/environment
+        sudo sed -i 's/GITDIR="$GITDIR"/GITDIR="$gr"/' /etc/environment
     else
         cp /etc/environment ~/environment
         echo -e "\nGITDIR="$gr"" >> ~/environment
