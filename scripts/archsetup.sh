@@ -26,14 +26,8 @@ echo "GITDIR="$gr"" >> ~/environment
 sudo mv ~/environment /etc/environment
 sudo mv GITDIR.sh /etc/profile.d/GITDIR.sh
 
-# yay setup
+# config setup
 mkdir "$gr" && cd "$gr"
-git clone https://aur.archlinux.org/yay.git
-chown -R "$USER":"$USER" yay                 #idk if works
-cd yay
-sudo makepkg -si
-yay --version
-cd ~ "$gr"
 git clone https://github.com/r3quie/config.git
 
 if source config/scripts/functions.sh; then
@@ -44,8 +38,16 @@ else
     exit
 fi
 
+# yay setup
+cd ~/"$gr"
+git clone https://aur.archlinux.org/yay.git
+chown -R "$USER":"$USER" yay                 #idk if works
+cd yay
+sudo makepkg -si
+yay --version
+
 yay pfetch
-sleep 1
+pfetch
 
 # startup
 fncStartup
