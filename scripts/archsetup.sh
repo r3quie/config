@@ -19,6 +19,9 @@ if [ -z "${gr}" ]; then
 fi
 
 echo "GITDIR="$gr"" >> GITDIR.sh
+cp /etc/environment ~
+echo "GITDIR="$gr"" >> ~/environment
+sudo mv ~/environment /etc/environment
 sudo mv GITDIR.sh /etc/profile.d/GITDIR.sh
 
 # yay setup
