@@ -47,6 +47,7 @@ fncSetGITDIR () {
         gr=gitrepos
     fi
 
-    echo "GITDIR="$gr"" >> GITDIR.sh
-    sudo mv GITDIR.sh /etc/profile.d/GITDIR.sh
+    cp /env/enviroment ~/enviroment
+    echo -e "\nGITDIR="$gr"" >> ~/enviroment
+    sudo mv ~/enviroment /env/enviroment
 }
