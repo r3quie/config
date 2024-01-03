@@ -11,20 +11,20 @@ end
 
 function fncStartup
     set -l whichfnc fncStartup
-    runbash
+    runbashs
 end
 
 function fncSetuplinks
     set -l whichfnc fncSetuplinks
-    runbash
+    runbashs
 end
 
 function gitpushconfig
     set -l whichfnc gitpushconfig
-    runbash
+    runbashs
 end
 
 function fncSetGITDIR
     set -l whichfnc fncSetGITDIR
-    runbash
+    runbashs
 end
