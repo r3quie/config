@@ -4,7 +4,8 @@ function runbashs
     cp ~/scripts/.functions.sh ~/.local/cache/usercstm/
     chmod +x ~/.local/cache/usercstm/.functions.sh
     echo -e "\n$whichfnc" >> ~/.local/cache/usercstm/.functions.sh
-    ~/.local/cache/usercstm/.functions.sh && rm ~/.local/cache/usercstm/.functions.sh
+    ~/.local/cache/usercstm/.functions.sh
+    rm ~/.local/cache/usercstm/.functions.sh
 end
 
 function fncStartup
