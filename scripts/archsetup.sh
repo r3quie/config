@@ -23,7 +23,7 @@ fi
 
 echo "GITDIR="$gr"" >> GITDIR.sh
 cp /etc/environment ~
-echo "GITDIR="$gr"" >> ~/environment
+echo -e "\nGITDIR="$gr"" >> ~/environment
 sudo mv ~/environment /etc/environment
 sudo mv GITDIR.sh /etc/profile.d/GITDIR.sh
 
