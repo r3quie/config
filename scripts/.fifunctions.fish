@@ -8,21 +8,21 @@ function runbashs
 end
 
 function fncStartup
-    set -l whichfnc 'fncStartup'
+    set whichfnc fncStartup
     runbashs
 end
 
 function fncSetuplinks
-    set -l whichfnc 'fncSetuplinks'
+    set whichfnc fncSetuplinks
     runbashs
 end
 
 function gitpushconfig
-    set -l whichfnc 'gitpushconfig'
+    set whichfnc gitpushconfig
     runbashs
 end
 
 function fncSetGITDIR
-    set -l whichfnc 'fncSetGITDIR'
+    set whichfnc fncSetGITDIR
     runbashs
 end
