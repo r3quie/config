@@ -35,7 +35,7 @@ alias cdh='cd ~'
 alias pullconf='cdgit && git pull'
 
 alias update='sudo pacman -Suy && yay -Suy'
-alias mountPC='~/scripts/mountPC.sh' #mounts remote folder from local PC
+alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
 alias updatedots='~/scripts/updatedots.sh'
 
 alias footopa='sed -i 's/alpha=1/alpha=0.5/' ~/.config/foot/foot.ini'

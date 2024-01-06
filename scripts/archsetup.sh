@@ -7,7 +7,7 @@ echo "if you wish to run setup, enter password, press control+c to stop setup"
 read
 
 cd ~
-mkdir ~/.local/cache/usercst || mkdir ~/.local/cache && mkdir ~/.local/cache/usercst
+mkdir ~/.local/cache/usercstm || mkdir ~/.local/cache && mkdir ~/.local/cache/usercstm
 # system update + pacman
 sudo pacman -Suy
 sudo pacman -S fish git foot starship
