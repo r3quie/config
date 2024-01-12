@@ -14,14 +14,14 @@ pfetch
 alias ls='ls --color=auto'				#ls
 alias grep='grep --color=auto'  			#grep
 alias clearn='clear; neofetch'				#clear + neofetch
-alias spac='sudo pacman -S'				#sudo pacman -S
+alias sapt='sudo apt install'	
 alias cdgit='cd ~/"$GITDIR"/config'
 alias hexit='hyprctl dispatch exit'
 alias cdh='cd ~'
 alias cdc='cd ~/.config'
 alias pullconf='cdgit && git pull'
 
-alias update='sudo pacman -Suy && yay -Suy'
+alias update='yay -Suy && sudo apt update && sudo apt upgrade'
 alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
 alias updatedots='~/scripts/updatedots.sh'
 
