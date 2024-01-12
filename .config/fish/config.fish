@@ -28,13 +28,13 @@ pfetch
 alias clearn="clear; neofetch"
 alias cdc="cd ~/.config/"
 alias vimfish="vim .config/fish/config.fish"
-alias spac="sudo pacman -S"
+alias sapt='sudo apt install'
 alias cdgit='cd ~/"$GITDIR"/config'
 alias hexit='hyprctl dispatch exit'
 alias cdh='cd ~'
 alias pullconf='cdgit && git pull'
 
-alias update='sudo pacman -Suy && yay -Suy'
+alias update='yay -Suy && sudo apt update && sudo apt upgrade'
 alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
 alias updatedots='~/scripts/updatedots.sh'
 
