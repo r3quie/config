@@ -36,7 +36,7 @@ gitpushconfig () {
     echo "Enter commit name "
     read nm
     git commit -m "$nm"
-    git push origin main
+    git push origin
 }
 
 fncSetGITDIR () {
