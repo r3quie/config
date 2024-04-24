@@ -42,7 +42,8 @@ fi
 # stop for userinput
 echo -e "Let this script decide for you based on git status ${BGreen}(auto[M]atically)${Color_Off}"
 
-read "last chance to ctrl-c"
+echo "last chance to ctrl-c"
+read
 
 
 #exit if both vars eq 0
