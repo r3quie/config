@@ -131,9 +131,10 @@ alias clearn='clear; neofetch'				#clear + neofetch
 alias sapt='sudo apt install'	
 alias cdgit='cd ~/"$GITDIR"/config'
 alias hexit='hyprctl dispatch exit'
-alias cdh='cd ~'
+alias cdh='cd ~~/"$GITDIR"/django'
 alias cdc='cd ~/.config'
 alias pullconf='cdgit && git pull'
+alias cdda='dc '
 
 alias update='yay -Suy && sudo apt update && sudo apt upgrade'
 alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
