@@ -30,7 +30,7 @@ fncSetuplinks () {
     cd ~
 }
 
-gitpushconfig () {
+gitpush () {
     git add .
     echo "Enter commit name "
     read nm
