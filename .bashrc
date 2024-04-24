@@ -139,6 +139,7 @@ alias cdda='cd ~/"$GITDIR"/django'
 alias update='yay -Suy && sudo apt update && sudo apt upgrade'
 alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
 alias updatedots='~/scripts/updatedots.sh'
+alias updtrepos='~/scripts/updaterepos.sh'
 
 alias footopa='sed -i 's/alpha=1/alpha=0.5/' ~/.config/foot/foot.ini'
 
