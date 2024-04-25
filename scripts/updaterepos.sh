@@ -11,7 +11,7 @@ source ~/scripts/.colors.sh
 cd ~/"$GITDIR"/config
 git remote update
 if git status -uno | grep -q "Your branch is up to date"; then
-	echo -e "${BYellow}Git config is up to date${Color_Off}"
+	echo -e "$${BGreen}Git config is up to date${Color_Off}"
    cup=0
 else
 	echo -e "${BPurple}Git config is not up to date${Color_Off}"
@@ -22,7 +22,7 @@ fi
 cd ~/"$GITDIR"/django
 git remote update
 if git status -uno | grep -q "Your branch is up to date"; then
-	echo -e "${BYellow}Git django is up to date${Color_Off}"
+	echo -e "$${BGreen}Git django is up to date${Color_Off}"
    dup=0
 else
 	echo -e "${BPurple}Git django is not up to date${Color_Off}"
@@ -32,7 +32,7 @@ fi
 cd ~/"$GITDIR"/edhcarddealer
 git remote update
 if git status -uno | grep -q "Your branch is up to date"; then
-	echo -e "${BYellow}Git edhcarddealer is up to date${Color_Off}"
+	echo -e "${BGreen}Git edhcarddealer is up to date${Color_Off}"
    eup=0
 else
 	echo -e "${BPurple}Git edhcarddealer is not up to date${Color_Off}"
