@@ -122,7 +122,7 @@ fi
 #### ON TERMINAL OPEN ####
 source ~/scripts/.functions.sh
 pfetch
-	eval "$(starship init bash)"
+eval "$(starship init bash)"
 
 #### ALIASES ####
 # everyday
@@ -130,19 +130,19 @@ alias ls='ls --color=auto'				#ls
 alias grep='grep --color=auto'  			#grep
 alias clearn='clear; neofetch'				#clear + neofetch
 alias sapt='sudo apt install'	
-alias cdgit='cd ~/"$GITDIR"/config'
+alias cdgit='cd ~/"$GITDIR"'
 alias hexit='hyprctl dispatch exit'
 alias cdh='cd ~'
-alias cdc='cd ~/.config'
-alias pullconf='cdgit && git pull'
+alias cdc='cd ~/"$GITDIR"/config'
 
 alias cdda='cd ~/"$GITDIR"/django'
 alias rundjango='cd ~/gitrepos/django && sudo python manage.py runserver www.r3quie.com:80'
 
-alias update='yay -Suy && sudo apt update && sudo apt upgrade'
+alias update='sudo apt update && sudo apt upgrade'
 alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
 alias updatedots='~/scripts/updatedots.sh'
 alias updtrepos='~/scripts/updaterepos.sh'
+alias pushrepos='cdc; gitpush; cdda; gitpush; cd ~/"$GITDIR"/edhcarddealer/; gitpush'
 
 alias footopa='sed -i 's/alpha=1/alpha=0.5/' ~/.config/foot/foot.ini'
 
