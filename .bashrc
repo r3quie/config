@@ -137,7 +137,7 @@ alias cdc='cd ~/.config'
 alias pullconf='cdgit && git pull'
 
 alias cdda='cd ~/"$GITDIR"/django'
-alias rundjango='sudo python ~/gitrepos/django/manage.py runserver www.r3quie.com:80'
+alias rundjango='cd ~/gitrepos/django && sudo python manage.py runserver www.r3quie.com:80'
 
 alias update='yay -Suy && sudo apt update && sudo apt upgrade'
 alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
