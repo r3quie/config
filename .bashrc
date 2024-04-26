@@ -134,9 +134,11 @@ alias cdgit='cd ~/"$GITDIR"'
 alias hexit='hyprctl dispatch exit'
 alias cdh='cd ~'
 alias cdc='cd ~/"$GITDIR"/config'
+alias sourceb='source ~/.bashrc'
 
 alias cdda='cd ~/"$GITDIR"/django'
 alias rundjango='cd ~/gitrepos/django && sudo python manage.py runserver www.r3quie.com:80'
+alias migratedj='cd ~/gitrepos/django && sudo python manage.py makemigrations && sudo python manage.py migrate'
 
 alias update='sudo apt update && sudo apt upgrade'
 alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
