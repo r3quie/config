@@ -122,6 +122,7 @@ fi
 #### ON TERMINAL OPEN ####
 source ~/scripts/.functions.sh
 pfetch
+	eval "$(starship init bash)"
 
 #### ALIASES ####
 # everyday
