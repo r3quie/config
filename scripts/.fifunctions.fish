@@ -18,8 +18,8 @@ function fncSetuplinks
     runbashs
 end
 
-function gitpushconfig
-    set -g whichfnc gitpushconfig
+function gitpush
+    set -g whichfnc gitpush
     runbashs
 end
 
