@@ -23,6 +23,7 @@ fncSetuplinks () {
     cd ~
     rm .bashrc
     ln -sf ~/"$GITDIR"/config/.bashrc
+    ln -sf ~/"$GITDIR"/config/.bashrc_aliases
     ln -sf ~/"$GITDIR"/config/scripts
     cd ~/.config/fish
     rm config.fish

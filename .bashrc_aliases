@@ -1,0 +1,28 @@
+#### ALIASES ####
+# everyday
+alias ls='ls --color=auto'				#ls
+alias grep='grep --color=auto'  			#grep
+alias clearn='clear; neofetch'				#clear + neofetch
+alias sapt='sudo apt install'	
+alias cdgit='cd ~/"$GITDIR"'
+alias hexit='hyprctl dispatch exit'
+alias cdh='cd ~'
+alias cdc='cd ~/"$GITDIR"/config'
+alias sourceb='source ~/.bashrc'
+
+alias cdda='cd ~/"$GITDIR"/django'
+alias rundjango='cd ~/gitrepos/django && sudo python manage.py runserver www.r3quie.com:80'
+alias migratedj='cd ~/gitrepos/django && sudo python manage.py makemigrations && sudo python manage.py migrate'
+
+alias update='sudo apt update && sudo apt upgrade'
+alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
+alias updatedots='~/scripts/updatedots.sh'
+alias updtrepos='~/scripts/updaterepos.sh'
+alias pushrepos='cdc; gitpush; cdda; gitpush; cd ~/"$GITDIR"/edhcarddealer/; gitpush'
+
+alias footopa='sed -i 's/alpha=1/alpha=0.5/' ~/.config/foot/foot.ini'
+
+# ufw
+alias ufw='sudo ufw'					#auto sudo on ufw call
+alias ufwsa='sudo ufw allow 22/tcp; sudo ufw allow 22'  #open SSH ports
+alias ufwsd='sudo ufw deny 22/tcp; sudo ufw deny 22'    #close SSH ports
