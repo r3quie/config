@@ -14,6 +14,7 @@ alias cdda='cd ~/"$GITDIR"/django'
 alias rundjango='cd ~/gitrepos/django && sudo python manage.py runserver www.r3quie.com:80'
 alias migratedj='cd ~/gitrepos/django && sudo python manage.py makemigrations && sudo python manage.py migrate'
 alias rungnu='cd ~/site && gunicorn -c conf/gunicorn_config.py mtg.wsgi'
+alias envact='source ~/site/.venv/bin/activate'
 
 alias update='sudo apt update && sudo apt upgrade'
 alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
