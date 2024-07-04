@@ -23,6 +23,7 @@ fncSetuplinks () {
     cd ~
     rm .bashrc
     ln -sf ~/"$GITDIR"/config/.bashrc
+    ln -sf ~/"$GITDIR"/config/.bashrc_aliases
     ln -sf ~/"$GITDIR"/config/scripts
     cd ~/.config/fish
     rm config.fish
@@ -30,13 +31,12 @@ fncSetuplinks () {
     cd ~
 }
 
-gitpushconfig () {
-    cd ~/"$GITDIR"/config
+gitpush () {
     git add .
     echo "Enter commit name "
     read nm
     git commit -m "$nm"
-    git push origin main
+    git push origin
 }
 
 fncSetGITDIR () {
