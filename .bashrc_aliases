@@ -3,7 +3,7 @@
 alias ls='ls --color=auto'				#ls
 alias grep='grep --color=auto'  			#grep
 alias clearn='clear; neofetch'				#clear + neofetch
-alias sapt='sudo apt install'	
+alias spac='sudo pacman -S'	
 alias cdgit='cd ~/"$GITDIR"'
 alias hexit='hyprctl dispatch exit'
 alias cdh='cd ~'
@@ -16,7 +16,7 @@ alias migratedj='cd ~/gitrepos/django && sudo python manage.py makemigrations &&
 alias rungnu='cd ~/site && gunicorn -c conf/gunicorn_config.py mtg.wsgi'
 alias envact='source ~/site/.venv/bin/activate'
 
-alias update='sudo apt update && sudo apt upgrade'
+alias update='sudo pacman -Suy && yay -Suy'
 alias mountPC='~/mountPC.sh' #mounts remote folder from local PC
 alias updatedots='~/scripts/updatedots.sh'
 alias updtrepos='~/scripts/updaterepos.sh'
