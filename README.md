@@ -1,3 +1,3 @@
-# Raspi
+# Arch    
 
-rando config shit for my raspi
+rando config shit for my arch devices
