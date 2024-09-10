@@ -55,3 +55,7 @@ fncSetGITDIR () {
         sudo mv ~/environment /etc/environment
     fi
 }
+
+mvbuild () {
+  sudo rm -r /usr/share/nginx/html/build && sudo mv  ~/"$GITDIR"/go-react/edh/build /usr/share/nginx/html/
+}
