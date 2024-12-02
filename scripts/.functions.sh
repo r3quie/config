@@ -59,3 +59,23 @@ fncSetGITDIR () {
 mvbuild () {
   sudo rm -r /usr/share/nginx/html/build && sudo mv  ~/"$GITDIR"/go-react/edh/build /usr/share/nginx/html/
 }
+
+move_to_bin() {
+    if [[ $# -eq 0 ]]; then
+        echo "Usage: move_to_bin <executable_file>"
+        return 1
+    fi
+
+    local file="$1"
+    if [[ ! -f $file ]]; then
+        echo "Error: '$file' is not a valid file."
+        return 1
+    fi
+
+    if [[ ! -x $file ]]; then
+        echo "Error: '$file' is not executable."
+        return 1
+    fi
+
+    sudo mv "$file" /usr/bin/ && sudo chmod 755 /usr/bin/"$(basename "$file")" && echo "Moved and set permissions for $file"
+}
