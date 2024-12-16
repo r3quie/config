@@ -1,0 +1,7 @@
+source ~/.bashrc_aliases
+source ~/scripts/.functions.sh
+pfetch
+
+#eval "$(starship init bash)"
+
+
