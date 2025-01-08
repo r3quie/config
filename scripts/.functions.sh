@@ -60,6 +60,10 @@ mvbuild () {
   sudo rm -r /usr/share/nginx/html/build && sudo mv  ~/"$GITDIR"/go-react/edh/build /usr/share/nginx/html/
 }
 
+mvbuild2 () {
+  sudo rm -r /usr/share/nginx/html/build2 && sudo mv  ~/"$GITDIR"/nakup/build /usr/share/nginx/html/build2
+}
+
 move_to_bin() {
     if [[ $# -eq 0 ]]; then
         echo "Usage: move_to_bin <executable_file>"
